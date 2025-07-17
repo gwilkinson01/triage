@@ -21,7 +21,7 @@ MINIFLUX_API_KEY = "<apikeyhere>"
 PROCESSED_FILE = 'processed_articles.json'
 
 # Slack Webhook URL
-SLACK_WEBHOOK_URL = "https://hooks.slack.com/services/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"
+SLACK_WEBHOOK_URL = "<webhookhere>"
 
 # Function to send a message to Slack via Webhook
 def send_to_slack(message):
@@ -43,7 +43,7 @@ def load_processed_articles():
         with open(PROCESSED_FILE, 'r') as f:
             try:
                 processed_articles = json.load(f)
-                print(f"✅ Loaded {len(processed_articles)} processed articles.")
+                print(f"Loaded {len(processed_articles)} processed articles.")
                 return processed_articles
             except json.JSONDecodeError:
                 print("Error loading JSON data. Returning an empty list.")
